@@ -6,11 +6,13 @@ import { Integrations } from "@sentry/tracing";
 
 Sentry.init({
   Vue,
-  dsn: "",
+  dsn: "https://examplePublicKey@o0.ingest.sentry.io/0",
   integrations: [
     new Integrations.BrowserTracing(),
   ],
-  release: "%VUE_APP_RELEASE_VERSION%",
+  tracingOptions: {
+    trackComponents: true,
+  },
 });
 
 Vue.config.productionTip = false

@@ -16,7 +16,7 @@ export default {
     sendError() {
       setTimeout(() => {
         throw new Error('test');
-      }, 10000) 
+      }, 20000) 
     }
   }
 }
